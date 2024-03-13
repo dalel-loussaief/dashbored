@@ -4,6 +4,8 @@ import { LIGHT_THEME } from "../../constants/themeConstants";
 import LogoBlue from "../../assets/images/logo_blue.svg";
 import LogoWhite from "../../assets/images/logo_white.svg";
 import {
+  MdFeedback,
+  MdMailOutline,
   MdOutlineAttachMoney,
   MdOutlineBarChart,
   MdOutlineClose,
@@ -96,7 +98,7 @@ const Sidebar = () => {
               </Link>
             </li>
             <li className="menu-item">
-              <Link to="/" className="menu-link">
+              <Link to="/Property" className="menu-link">
                 <span className="menu-link-icon">
                 <BiHomeAlt size={20} /> {/* Icône de propriété */}
                 </span>
@@ -125,6 +127,22 @@ const Sidebar = () => {
                 <MdBuild />
                 </span>
                 <span className="menu-link-text">Service</span>
+              </Link>
+            </li>
+            <li className="menu-item">
+              <Link to="/ContactList" className="menu-link">
+                <span className="menu-link-icon">
+                <MdMailOutline size={20} /> 
+                </span>
+                <span className="menu-link-text">ContactList </span>
+              </Link>
+            </li>
+            <li className="menu-item">
+              <Link to="/TestimonialList" className="menu-link">
+                <span className="menu-link-icon">
+                <MdFeedback size={20} /> 
+                </span>
+                <span className="menu-link-text">TestimonialList </span>
               </Link>
             </li>
           </ul>

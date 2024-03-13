@@ -19,6 +19,12 @@ import Profil from "./layout/Profil";
 import Service from "./layout/Service";
 import FormService from "./layout/FormService";
 import ServiceAdd from "./layout/ServiceAdd";
+import ContactList from "./layout/ContactList";
+import ChatPage from "./layout/ChatPage";
+import TestimonialList from "./layout/TestimonialList";
+import Property from "./layout/Property";
+import EditPropertyForm from "./layout/EditPropertyForm";
+
 function App() {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
@@ -37,6 +43,7 @@ function App() {
         <Routes>
           <Route element={<BaseLayout />}>
             <Route path="/" element={<Dashboard />} />
+            <Route path="/chat/:id"  element={<ChatPage/>} />
             <Route path="/User" element={<User />} />
             <Route path="/Agent" element={<Agent />} />
             <Route path="/FormAgent/:id" element={<FormAgent />} />
@@ -48,8 +55,13 @@ function App() {
             <Route path="/Profil" element={<Profil />} />
             <Route path="/Service" element={<Service />} />
             <Route path="/ServiceAdd" element={<ServiceAdd />} />
+            <Route path="/ContactList" element={<ContactList />} />
             <Route path="/FormService/:id" element={<FormService />} />
             <Route path="*" element={<PageNotFound />} />
+            <Route path="/TestimonialList" element={<TestimonialList/>} />
+            <Route path="/Property" element = {<Property/>} />
+            <Route path="/editproperty/:id" element={<EditPropertyForm/>} />
+
           </Route>
         </Routes>
 
